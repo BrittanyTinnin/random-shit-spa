@@ -89,26 +89,31 @@
     </nav>
 
     <!-- HOME  -->
-    <header id="home" class="py-5">
+    <secion id="home" class="py-5">
       <div class="container home-inner p-5 mt-5">
-        <h1 class="display-1 text-warning text-center py-5">
-          Take A Look At Random Shit &mdash; Enjoy!
-        </h1>
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="display-1 text-warning text-center py-5">
+              Take A Look At Random Shit &mdash; Enjoy!
+            </h1>
+          </div>
+        </div>
       </div>
-    </header>
+    </secion>
 
     <!-- QUOTES  -->
     <section id="jokes" class="py-5">
       <div class="container py-5">
         <div class="row py-5">
-          <div class="col-md-8 text-center align-self-center my-5 pl-3">
+          <div class="col-md-8 text-center align-self-center my-5">
             <div class="card border-warning shadow-lg">
               <h3 class="card-header bg-warning text-white">Jokes</h3>
               <div class="card-body p-5">
                 <div class="card-text">
                   <blockquote class="blockquote">
                     <p id="number-facts-home">
-                      110 is the atomic number of darmstadtium.
+                      What does Harry Potter have that Voldemort doesn't? ... A
+                      nose!
                     </p>
                   </blockquote>
                 </div>
@@ -149,36 +154,181 @@
 
     <!-- LOTTERY SECTION  -->
     <section id="lottery" class="py-5">
-      <div class="container">
+      <div class="container inner-lottery">
         <div class="row">
-          <table class="table table-borderless text-white text-center">
-            <thead>
+          <div class="col">
+            <div class="table-responsive-sm">
+              <table class="table table-borderless text-white text-center">
+                <thead>
+                  <tr>
+                    <th scope="col" class="h2">Ball #1</th>
+                    <th scope="col" class="h2">Ball #2</th>
+                    <th scope="col" class="h2">Ball #3</th>
+                    <th scope="col" class="h2">Ball #4</th>
+                    <th scope="col" class="h2">Ball #6</th>
+                    <th scope="col" class="h2">PowerBall</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="h3" id="lottoOne">34</td>
+                    <td class="h3" id="lottoTwo">56</td>
+                    <td class="h3" id="lottoThree">12</td>
+                    <td class="h3" id="lottoFour">21</td>
+                    <td class="h3" id="lottoFive">48</td>
+                    <td class="h3" id="power-ball">24</td>
+                    <!-- Select five numbers from 1 to 69 for the white balls; then select one number from 1 to 26 for the red Powerball. -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col text-center mt-3">
+              <button id="lotteryBtn" class="btn btn-warning">Generate</button>
+            </div>
+          </div>
+        </div>
+        <div class="row py-5 d-none d-md-block">
+          <table class="table table-bordered text-white">
+            <thead class="text-center">
               <tr>
-                <th scope="col" class="h2">Ball #1</th>
-                <th scope="col" class="h2">Ball #2</th>
-                <th scope="col" class="h2">Ball #3</th>
-                <th scope="col" class="h2">Ball #4</th>
-                <th scope="col" class="h2">Ball #6</th>
-                <th scope="col" class="h2">PowerBall</th>
+                <th scope="col" class="h3">Matched Numbers</th>
+                <th scope="col" class="h3">Prize</th>
+                <th scope="col" class="h3">Odds of Winning</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="h3" id="lottoOne">34</td>
-                <td class="h3" id="lottoTwo">56</td>
-                <td class="h3" id="lottoThree">12</td>
-                <td class="h3" id="lottoFour">21</td>
-                <td class="h3" id="lottoFive">48</td>
-                <td class="h3" id="power-ball">24</td>
-                <!-- Select five numbers from 1 to 69 for the white balls; then select one number from 1 to 26 for the red Powerball. -->
+              <tr class="table-warning text-dark font-weight-bold">
+                <td>
+                  <div>
+                    <span>5 + Powerball</span>
+                    <img
+                      src="images/match-5-1.svg"
+                      alt="5 + Powerball"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>Jackpot</td>
+                <td>1 in 292,201,338</td>
+              </tr>
+              <tr class="font-weight-bold">
+                <td>
+                  <div>
+                    <span>5</span>
+                    <img
+                      src="images/match-5-0.svg"
+                      alt="5"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$1,000,000</td>
+                <td>1 in 11,688,053</td>
+              </tr>
+              <tr class="table-warning text-dark font-weight-bold">
+                <td>
+                  <div>
+                    4 + Powerball
+                    <img
+                      src="images/match-4-1.svg"
+                      alt="4 + Powerball"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$50,000</td>
+                <td>1 in 913,129</td>
+              </tr>
+              <tr class="font-weight-bold">
+                <td>
+                  <div>
+                    4
+                    <img
+                      src="images/match-4-0.svg"
+                      alt="4"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$100</td>
+                <td>1 in 36,525</td>
+              </tr>
+              <tr class="table-warning text-dark font-weight-bold">
+                <td>
+                  <div>
+                    3 + Powerball
+                    <img
+                      src="images/match-3-1.svg"
+                      alt="3 + Powerball"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$100</td>
+                <td>1 in 14,494</td>
+              </tr>
+              <tr class="font-weight-bold">
+                <td>
+                  <div>
+                    3
+                    <img
+                      src="images/match-3-0.svg"
+                      alt="3"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$7</td>
+                <td>1 in 579</td>
+              </tr>
+              <tr class="table-warning text-dark font-weight-bold">
+                <td>
+                  <div>
+                    2 + Powerball
+                    <img
+                      src="images/match-2-1.svg"
+                      alt="2 + Powerball"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$7</td>
+                <td>1 in 701</td>
+              </tr>
+              <tr class="font-weight-bold">
+                <td>
+                  <div>
+                    1 + Powerball
+                    <img
+                      src="images/match-1-1.svg"
+                      alt="1 + Powerball"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$4</td>
+                <td>1 in 91.98</td>
+              </tr>
+              <tr class="table-warning text-dark font-weight-bold">
+                <td>
+                  <div>
+                    Powerball only
+                    <img
+                      src="images/match-0-1.svg"
+                      alt="Powerball only"
+                      class="float-right"
+                    />
+                  </div>
+                </td>
+                <td>$4</td>
+                <td>1 in 38.32</td>
               </tr>
             </tbody>
           </table>
-          <div class="col text-center mt-3">
-            <button id="lotteryBtn" class="btn btn-warning">Generate</button>
-          </div>
         </div>
-        <div class="row py-5">
+      </div>
+
+      <div class="row py-5 d-none d-md-block">
           <table class="table table-bordered text-white">
             <thead class="text-center">
               <tr>

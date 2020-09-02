@@ -19,8 +19,19 @@ body {
 
 #jokes {
   background: rgb(156, 39, 176, 0.8);
+
+  /* width: 100%; */
 }
 
 #lottery {
   background: rgb(156, 39, 176, 0.8);
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 281px) {
+  #showcase {
+    min-height: 400px;
+  }
 }
