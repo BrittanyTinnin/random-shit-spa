@@ -1,13 +1,13 @@
 $(document).ready(function () {
   // NUMBER-FACTS
-  const URL = 'http://numbersapi.com/random/trivia';
+  const URL = 'https://sv443.net/jokeapi/v2/joke/Any?type=single';
 
   $('#quoteBtn').click(function () {
     $.ajax({
       url: URL,
       type: 'GET',
       success: function (data) {
-        $('#number-facts-home').text(data);
+        $('#number-facts-home').text(data.joke);
       },
       error: function (e) {
         console.log(`Error ${e}`);
@@ -55,7 +55,7 @@ $(document).ready(function () {
   // NASA
   let searchTerm = '';
 
-  const youtubeURL = `https://www.googleapis.com/youtube/v3/search?maxResults=5&q=${searchTerm}&key=${ENV[API_KEY]}`;
+  // const youtubeURL = `https://www.googleapis.com/youtube/v3/search?maxResults=5&q=${searchTerm}&key=${ENV[API_KEY]}`;
 
   $('#nasaBtn').click(function () {
     $.ajax({
