@@ -44,12 +44,12 @@ $(document).ready(function () {
 
   $('#lotteryBtn').click(function () {
     console.log('random number: ' + Math.floor(Math.random() * 69));
-    $('#lottoOne').text(Math.floor(Math.random() * 69));
-    $('#lottoTwo').text(Math.floor(Math.random() * 69));
-    $('#lottoThree').text(Math.floor(Math.random() * 69));
-    $('#lottoFour').text(Math.floor(Math.random() * 69));
-    $('#lottoFive').text(Math.floor(Math.random() * 69));
-    $('#power-ball').text(Math.floor(Math.random() * 26));
+    $('#lottoOne').text(Math.floor(Math.random() * 68) + 1);
+    $('#lottoTwo').text(Math.floor(Math.random() * 68) + 1);
+    $('#lottoThree').text(Math.floor(Math.random() * 68) + 1);
+    $('#lottoFour').text(Math.floor(Math.random() * 68) + 1);
+    $('#lottoFive').text(Math.floor(Math.random() * 68) + 1);
+    $('#power-ball').text(Math.floor(Math.random() * 25) + 1);
   });
 
   // NASA
